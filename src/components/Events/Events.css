@@ -1,0 +1,9 @@
+.Events {
+    text-align: center;
+    background-color: #e5898b;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }

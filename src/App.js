@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+  } from "react-router-dom";
+  
+  // import Home component
+  import Home from "./components/Home/Home";
+  // import About component
+  import About from "./components/About/About";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  import Navbar from "./components/Navbar/Navbar";
 
-export default App;
+  import IntroSlide from "./components/IntroSlide/IntroSlide";
+
+  import Contact from "./components/Contact/Contact";
+
+  import Events from "./components/Events/Events";
+
+  import Shop from "./components/Shop/Shop";
+
+const App = () => {
+    return (
+        <BrowserRouter>
+            <title>Open Road Energy</title>
+            <Navbar />
+            <IntroSlide />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+      </BrowserRouter>
+    );
+  };
+    
+  export default App;
