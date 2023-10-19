@@ -26,7 +26,7 @@ const App = () => {
             <title>Open Road Energy</title>
             <Navbar />
             <IntroSlide />
-            <Routes>
+            <Routes id="Pages">
                 <Route path="/" element={<Home />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/shop" element={<Shop />} />

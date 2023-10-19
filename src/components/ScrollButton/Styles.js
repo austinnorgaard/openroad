@@ -1,14 +1,4 @@
-import styled from 'styled-components'; 
-
-export const Heading = styled.h1` 
-text-align: center; 
-color: green; 
-`; 
-
-export const Content = styled.div` 
-overflowY: scroll; 
-height: 2500px; 
-`; 
+import styled from 'styled-components';
 
 export const Button = styled.div`
 position: fixed;
@@ -36,6 +26,8 @@ font-family: 'Rockwell', sans-serif;
 border-color: transparent;
 justify-content: center;
 align-items: center;
+text-align: center;
 font-size: calc(7px + 1vmin);
 padding-top: .5em;
+padding-bottom: .5em;
 `;

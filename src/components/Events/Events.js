@@ -2,7 +2,7 @@ import './Events.css';
 
 const Events = () => {
     return (
-        <div className="Events">
+        <div className="Page" id="Events">
           <body>
           
           </body>

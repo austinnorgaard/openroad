@@ -1,13 +1,10 @@
 import './IntroSlide.css';
-import logo from '../../logo.svg';
+import logo from '../../logo2.svg';
 
 const IntroSlide = () => {
     return (
         <div className="Intro">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-            Welcome to Open Road Energy!
-        </p>
   </div>
     );
   };

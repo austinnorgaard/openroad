@@ -1,19 +1,12 @@
-.About {
-    text-align: center;
-    background-color: #e5898b;
-    height: 200vh;
-    width: 100vw;
-    pointer-events: none;
-    color: black;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-  }
+h1#aboutHeader {
+  margin-top: 7rem;
+  color: black;
+}
 
-  h1 {
-    margin-top: 7rem;
-  }
-  
-  p {
-    font-family: "Rockwell", Sans-Serif;
-  }
+#First {
+  height: 200vh;
+}
+
+p {
+  font-family: "Rockwell", Sans-Serif;
+}

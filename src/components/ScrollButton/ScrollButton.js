@@ -3,19 +3,8 @@ import {Button, TopButtonText} from './Styles';
 
 const ScrollButton = () =>{ 
 
-const [visible, setVisible] = useState(false);
-
-const [desktopView, setDesktopView] = useState(false);
-
-const toggleDesktopView = () => {
-	const width = window.innerWidth;
-	if (width <= 768) {
-		setDesktopView(false);
-	}
-	else if (width > 768) {
-		setDesktopView(true);
-	}
-};
+const [visible, setVisible] = useState(false); 
+const [desktop, setDesktop] = useState(true);
 
 const toggleVisible = () => { 
 	const scrolled = document.documentElement.scrollTop; 
@@ -36,11 +25,21 @@ const scrollToTop = () =>{
 	}); 
 }; 
 
+const toggleDesktop = () => {
+	const width = window.innerWidth;
+	if (width <= 768) {
+		setDesktop(false);
+	}
+	else if (width > 768) {
+		setDesktop(true);
+	}
+}
+
 window.addEventListener('scroll', toggleVisible); 
-window.addEventListener('resize', toggleDesktopView);
+window.addEventListener('resize', toggleDesktop);
 
 return ( 
-	<Button style={{left: desktopView ? 'none' : '2rem', right: desktopView ? '2rem' : 'none'}}> 
+	<Button style={{right: desktop ? '2rem' : '', left: desktop ? '' : '2rem'}}> 
 	<TopButtonText onClick={scrollToTop} 
 	style={{display: visible ? 'flex' : 'none'}}>To Top ^</TopButtonText> 
 	</Button> 
